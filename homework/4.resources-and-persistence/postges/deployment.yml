@@ -1,0 +1,53 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: postgres10
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-app
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: postgres-app
+    spec:
+      containers:
+      - image: postgres:10.13-alpine
+        name: postgres
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_USER
+          value: testuser
+        - name: POSTGRES_DB
+          value: testdatabase
+        - name: PGDATA
+          value: /var/lib/postgres/data/pgdata
+        - name: POSTGRES_PASSWORD_FILE
+          value: /var/run/secrets/pgpass
+        resources:
+          requests:
+            cpu: 100m
+            memory: 500Mi
+          limits:
+            cpu: 1000m
+            memory: 1Gi
+        volumeMounts:
+        - name: pgsecret
+          mountPath: /var/run/secrets
+        - name: pgdata
+          mountPath: /var/lib/postgres/data
+      volumes:
+      - name: pgsecret
+        secret:
+          secretName: pg-testsecret
+          defaultMode: 0400
+      - name: pgdata
+        persistentVolumeClaim:
+          claimName: pgdata
+
+  
