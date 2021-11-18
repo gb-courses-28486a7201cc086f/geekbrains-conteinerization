@@ -30,7 +30,7 @@ ssh-keygen
 ```bash
 cd app
 git init
-git remote add origin git@gitlab.com:idwarlock/geekbrains.git
+git remote add origin git@gitlab.com:<your_gitlab_account/geekbrains.git
 git add .
 git commit -m "Initial commit"
 git push -u origin master
@@ -100,7 +100,7 @@ kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name": "gitlab-
 
 ## Запуск приложения
 
-* Создаем манифесты для БД в стейдже и проде
+* Создаем манифесты для БД в stage и prod
 
 ```bash
 kubectl apply --namespace stage -f app/kube/postgres/
@@ -111,7 +111,7 @@ kubectl apply --namespace prod -f app/kube/postgres/
 Для этого открываем app/kube/ingress.yaml
 Там ищем <CHANGE ME> и вставляем вместо него stage
 
-Далее применяем на стэйдж
+Далее применяем на stage
 
 ```bash
 kubectl apply --namespace stage -f app/kube

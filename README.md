@@ -51,6 +51,10 @@
 
 🔹 [Могут ли контейнеры быть безопасными?](https://habr.com/ru/company/oleg-bunin/blog/480630/)
 
+**Различные Container Runtime**
+
+🔹 [Различия между Docker, containerd, CRI-O и runc](https://habr.com/ru/company/domclick/blog/566224/)
+
 ## Лекция 2. Docker
 
 **Docker**
@@ -135,14 +139,21 @@
 
 ## Лекция 4. Хранение данных и ресурсы
 
+🔹 [Динамическое выделение дисков с PVC](https://mcs.mail.ru/help/ru_RU/k8s-pvc/k8s-pvc)
+
 🔹 [Рациональное использование ресурсов в Kubernetes](https://habr.com/ru/company/timeweb/blog/560670/)
 
+🔹 [Как оптимизировать ограничения ресурсов Kubernetes](https://habr.com/ru/company/timeweb/blog/562500/)
 
 ## Лекция 5. Сетевые абстракции Kubernetes
 
 🔹 [Configure Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#configure-probes)
 
 🔹 [iptables: How Kubernetes Services Direct Traffic to Pods](https://dustinspecker.com/posts/iptables-how-kubernetes-services-direct-traffic-to-pods/)
+
+🔹 [NetworkPolicy Editor](https://cilium.io/blog/2021/02/10/network-policy-editor?utm_source=telegram.me&utm_medium=social&utm_campaign=cilium-predstavil-vizualnyy-redaktor-se)
+
+🔹 [NGINX Ingress Controller Annotations](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/)
 
 ## Лекция 6. Устройство кластера
 
@@ -153,6 +164,8 @@
 ## Лекция 7. Продвинутые абстракции
 
 🔹 [Митап "Stateful-приложения в 2020 году"](https://www.youtube.com/watch?v=ykIh4-616Ic&list=PL8D2P0ruohODzihD0D0FZXkVHXtXbb6w3&index=4&ab_channel=HighLoadChannel)
+
+🔹 [Заделываем дыры в кластере Kubernetes](https://www.youtube.com/watch?v=Ik7VqbgpRiQ&ab_channel=DevOpsChannel)
 
 🔹 [Jobs & Cronjobs in Kubernetes Cluster](https://medium.com/avmconsulting-blog/jobs-cronjobs-in-kubernetes-cluster-d0e872e3c8c8)
 
@@ -165,3 +178,5 @@
 🔹 [Антипаттерны деплоя в Kubernetes. Часть 2](https://habr.com/ru/company/timeweb/blog/560772/)
 
 🔹 [Антипаттерны деплоя в Kubernetes. Часть 3](https://habr.com/ru/company/timeweb/blog/561570/)
+
+🔹 [ПРОЕКТ «ФЕНИКС». КАК DEVOPS УСТРАНЯЕТ ХАОС И УСКОРЯЕТ РАЗВИТИЕ КОМПАНИИ](https://bombora.ru/book/64983/#.)
